@@ -9,12 +9,24 @@ function roll()
         document.getElementById('p2').value =parseInt(document.getElementById('p2').value)+randDice
         if(document.getElementById('p2').value>=target){
             document.getElementById('output').innerHTML = '<i>Player 2 wins!</p>'
+            document.getElementById('btn').innerText = 'Play Again'
+            if(document.getElementById('btn').innerText==='Play Again'){
+                document.getElementById('btn').onclick=function(){
+                    location.reload()
+                }
+            }
         }  
     }
     else{
         document.getElementById('p1').value = parseInt(document.getElementById('p1').value)+randDice
         if(document.getElementById('p1').value>=target){
             document.getElementById('output').innerHTML = '<i>Player 1 wins!</p>'
+            document.getElementById('btn').innerText = 'Play Again'
+            if(document.getElementById('btn').innerText==='Play Again'){
+                document.getElementById('btn').onclick=function(){
+                    location.reload()
+                }
+            }
         }
         
     }
